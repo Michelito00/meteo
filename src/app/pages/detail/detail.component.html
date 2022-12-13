@@ -1,0 +1,30 @@
+<button [routerLink]="'/'">Back</button>
+
+<h1> {{ latitude }} - {{ longitude }}</h1>
+
+<h2>Sunrise at {{ time.results.sunrise }} - Sunset at {{ time.results.sunset }}</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hour</th>
+      <th>Icon</th>
+      <th>Precipitation</th>
+      <th>Cloud Coverage</th>
+      <th>Temperature</th>
+      <th>Humidity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let status of meteo">
+      <td>{{ status.timepoint }}:00</td>
+      <td>
+        <img src={{status.icon}} alt='image'>
+      </td>
+      <td>{{ status.prec_type }}</td>
+      <td>{{ status.cloudcover }}</td>
+      <td>{{ status.temp2m }} °C</td>
+      <td>{{ status.rh2m }} %</td>
+    </tr>
+  </tbody>
+</table>

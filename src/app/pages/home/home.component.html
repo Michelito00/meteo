@@ -1,0 +1,31 @@
+<div
+     class="bg-image text-white d-flex flex-column"
+     style="
+            background-image: url('https://wallpaperaccess.com/full/3364029.jpg');
+            height: 100vh;
+            width: 100%;"
+     >
+
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+      <h1>Meteo</h1>
+    </div>
+
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+      <div>
+      <input [(ngModel)]="latitude" id="latitude" name="Latitude" type="text" placeholder="Latitude..." required />
+      <input [(ngModel)]="longitude" id="longitude" name="Longitude" type="text" placeholder="Longitude..." required />
+      <button type="submit" (click)="showDetail()">GO</button>
+    </div>
+    </div>
+
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+      <div>
+          <button [routerLink]="'/detail/25.7616798/-80.1917902'">Miami</button>
+          <button [routerLink]="'/detail/35.685013/139.752445'">Tokyo</button>
+          <button [routerLink]="'/detail/41.9027835/12.4963655'">Rome</button>
+          <button [routerLink]="'/detail/51.507351/-0.127758'">London</button>
+          <button [routerLink]="'/detail/48.8534100/2.3488000'">Paris</button>
+          <button [routerLink]="'/detail/55.755826/37.6173'">Moscow</button>
+      </div>
+    </div>
+</div>
