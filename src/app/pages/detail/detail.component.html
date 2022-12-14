@@ -1,18 +1,22 @@
-<button [routerLink]="'/'">Back</button>
+<button class="btn btn-default btn-warning back" [routerLink]="'/'">Back</button>
 
-<h1> {{ latitude }} - {{ longitude }}</h1>
+<h1 class="font-monospace text-center m-2 text-warning bg-dark rounded d-flex justify-content-between shadow"> <p class="m-3">Latitude: {{ latitude }}</p> <p class="m-3">Longitude: {{ longitude }}</p></h1>
 
-<h2>Sunrise at {{ time.results.sunrise }} - Sunset at {{ time.results.sunset }}</h2>
+<div class="d-flex justify-content-around time">
+  <div><img src="https://cdn-icons-png.flaticon.com/512/6991/6991342.png" alt="sunrise"> <p class="fw-bold">{{ time.results.sunrise }}</p></div>
+  <div><img src="https://cdn-icons-png.flaticon.com/512/382/382575.png" alt="sunset"> <p class="fw-bold">{{ time.results.sunset }}</p></div>
+</div>
 
-<table>
-  <thead>
+<div class="table-responsive text-center">
+<table class="table table-hover shadow">
+  <thead class="table-dark">
     <tr>
-      <th>Hour</th>
-      <th>Icon</th>
-      <th>Precipitation</th>
-      <th>Cloud Coverage</th>
-      <th>Temperature</th>
-      <th>Humidity</th>
+      <th scope="col">Hour</th>
+      <th scope="col">Icon</th>
+      <th scope="col">Precipitation</th>
+      <th scope="col">Cloud Coverage</th>
+      <th scope="col">Temperature</th>
+      <th scope="col">Humidity</th>
     </tr>
   </thead>
   <tbody>
@@ -28,3 +32,4 @@
     </tr>
   </tbody>
 </table>
+</div>

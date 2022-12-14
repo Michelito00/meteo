@@ -7,25 +7,25 @@
      >
 
     <div class="d-flex flex-grow-1 justify-content-center align-items-center">
-      <h1>Meteo</h1>
+      <h1 class="p-3 text-warning bg-dark rounded shadow">METEO</h1>
     </div>
 
     <div class="d-flex flex-grow-1 justify-content-center align-items-center">
-      <div>
-      <input [(ngModel)]="latitude" id="latitude" name="Latitude" type="text" placeholder="Latitude..." required />
-      <input [(ngModel)]="longitude" id="longitude" name="Longitude" type="text" placeholder="Longitude..." required />
-      <button type="submit" (click)="showDetail()">GO</button>
-    </div>
+        <div class="form-group">
+          <input [(ngModel)]="latitude" class="form-control bg-dark text-white" id="latitude" name="Latitude" type="text" placeholder="Latitude..." required />
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="longitude" class="form-control bg-dark text-white" id="longitude" name="Longitude" type="text" placeholder="Longitude..." required />
+        </div>
+      <button class="btn btn-default btn-warning go" type="submit" (click)="showDetail()">GO</button>
     </div>
 
     <div class="d-flex flex-grow-1 justify-content-center align-items-center">
-      <div>
-          <button [routerLink]="'/detail/25.7616798/-80.1917902'">Miami</button>
-          <button [routerLink]="'/detail/35.685013/139.752445'">Tokyo</button>
-          <button [routerLink]="'/detail/41.9027835/12.4963655'">Rome</button>
-          <button [routerLink]="'/detail/51.507351/-0.127758'">London</button>
-          <button [routerLink]="'/detail/48.8534100/2.3488000'">Paris</button>
-          <button [routerLink]="'/detail/55.755826/37.6173'">Moscow</button>
-      </div>
+        <button class="btn btn-default btn-warning m-1" [routerLink]="'/detail/25.7616798/-80.1917902'">Miami</button>
+        <button class="btn btn-default btn-warning m-1" [routerLink]="'/detail/35.685013/139.752445'">Tokyo</button>
+        <button class="btn btn-default btn-warning m-1" [routerLink]="'/detail/41.9027835/12.4963655'">Rome</button>
+        <button class="btn btn-default btn-warning m-1" [routerLink]="'/detail/51.507351/-0.127758'">London</button>
+        <button class="btn btn-default btn-warning m-1" [routerLink]="'/detail/48.8534100/2.3488000'">Paris</button>
+        <button class="btn btn-default btn-warning m-1" [routerLink]="'/detail/55.755826/37.6173'">Moscow</button>
     </div>
 </div>

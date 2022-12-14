@@ -1,0 +1,16 @@
+h1 {
+    font-size: 80px;
+}
+
+.form-group input {
+    width: 600px;
+}
+
+.form-group input, .go {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+button {
+    font-size: 20px;
+}
